@@ -1,0 +1,97 @@
+:root {
+    --main-color: rgb(1, 36, 186);
+    --accent-color: rgb(9, 216, 98);
+    --text-color: rgb(53, 53, 53);
+    --main-font: "Roboto", sans-serif;
+    --main-font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-font);
+    color: var(--text-color);
+}
+
+.header, .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+    padding: 20px;
+}
+
+.header {
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: var(--main-font-weight);
+    color: var(--main-color);
+}
+
+.menu ul {
+    display: flex;
+    gap: 40px;
+    font-weight: var(--main-font-weight);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo a {
+    color: var(--main-color);
+}
+
+.main {
+    height: calc(100vh - 80px);
+}
+
+h1, h3, h2 {
+    font-weight: var(--main-font-weight);
+    font-family: var(--main-font);
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.intro__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.btn {
+    margin-top: 40px;
+    padding: 20px 30px;
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}

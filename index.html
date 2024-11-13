@@ -6,13 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="logo"><a href="#">Loans.com</a></div>
         <nav class="menu">
             <ul>
-                <li><a href="#">Rates & feets</a></li>
+                <li><a href="#">Rates & Fees</a></li>
                 <li><a href="#">How to apply</a></li>
                 <li><a href="#">Questions?</a></li>
             </ul>
@@ -20,12 +24,21 @@
     </header>
     <section class="main">
         <div class="intro__info">
-            <h2>Personal loan</h2>
+            <h3>Personal loan</h3>
             <h1>Put your plans into actions.</h1>
             <div class="intro__icon">
             </div>
         </div>
-        <form class="intro__form"></form>
+        <form class="intro__form">
+            <h2>Let's change your life?</h2>
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+            <label for="text">How much do you need?</label>
+            <input type="number" id="loan" name="loan">
+            <button class="btn">Check your rates</button>
+        </form>
     </section>
 </body>
 </html>
