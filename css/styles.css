@@ -59,6 +59,11 @@ a {
 
 .main {
     height: calc(100vh - 80px);
+    justify-content: space-between;
+}
+
+.intro__info {
+   max-width: 500px;
 }
 
 h1, h3, h2 {
@@ -75,6 +80,49 @@ h3 {
     font-size: 1.5rem;
     color: var(--accent-color);
 }
+
+.intro__icon {
+    display: flex;
+    margin-top: 60px;
+    gap: 20px;
+}
+
+.icons__item {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.icons__cloud::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    content: "\f0c2";
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+}
+
+.icons__money::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    content: "\f3d1";
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+}
+
+.icons__timer::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    content: "\f2f2";
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+}
+
 
 .intro__form {
     display: flex;
