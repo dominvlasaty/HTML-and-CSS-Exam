@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Loans.com</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"/>
@@ -23,25 +23,27 @@
         </nav>
     </header>
     <section class="main">
-        <div class="intro__info">
-            <h3>Personal loan</h3>
-            <h1>Put your plans into actions.</h1>
-            <div class="intro__icon">
-                <div class="icons__item icons__cloud">Online application</div>
-                <div class="icons__item icons__money">Up to $50,000</div>
-                <div class="icons__item icons__timer">The money is yours in 48h</div>
+        <div class="container">
+            <div class="intro__info">
+                <h3>Personal loan</h3>
+                <h1>Put your plans into actions.</h1>
+                <div class="intro__icon">
+                    <div class="icons__item icons__cloud">Online application</div>
+                    <div class="icons__item icons__money">Up to $50,000</div>
+                    <div class="icons__item icons__timer">The money is yours in 48h</div>
+                </div>
             </div>
+            <form class="intro__form">
+                <h2>Let's change your life?</h2>
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="john.doe@apple.com">
+                <label for="text">How much do you need?</label>
+                <input type="number" id="loan" name="loan" placeholder="1.000">
+                <button class="btn">Check your rates</button>
+            </form>
         </div>
-        <form class="intro__form">
-            <h2>Let's change your life?</h2>
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required>
-            <label for="text">How much do you need?</label>
-            <input type="number" id="loan" name="loan">
-            <button class="btn">Check your rates</button>
-        </form>
     </section>
 </body>
 </html>

@@ -4,12 +4,23 @@
     --text-color: rgb(53, 53, 53);
     --main-font: "Roboto", sans-serif;
     --main-font-weight: 700;
+    --background-color: white;
+    --shadow: 0px 0px 20px rgba(0, 0, 0, 0.13);
+    --border-radius: 10px;
+    --gap-large: 40px;
+    --gap-small: 20px;
+    --icon-size: 2rem;
+    --icon-margin-bottom: 10px;
+    --form-padding: 30px;
+    --btn-padding: 20px 30px;
+    --btn-width: 65%;
 }
 
 * {
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     background-image: url(../images/background.jpg);
     background-position: center;
@@ -23,17 +34,14 @@ body {
     background-repeat: no-repeat;
 }
 
-.header, .main {
+/* Header */
+.header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 1100px;
     width: 100%;
-    padding: 20px;
-}
-
-.header {
-    justify-content: space-between;
+    padding: var(--gap-small);
 }
 
 .logo {
@@ -42,31 +50,47 @@ body {
     color: var(--main-color);
 }
 
+.logo a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
 .menu ul {
     display: flex;
-    gap: 40px;
+    gap: var(--gap-large);
     font-weight: var(--main-font-weight);
 }
 
-a {
+.menu a {
     text-decoration: none;
     color: inherit;
 }
 
-.logo a {
-    color: var(--main-color);
-}
-
+/* Main Section */
 .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: calc(100vh - 80px);
+    width: 100%;
+}
+
+.container {
+    display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1100px;
+    padding: var(--gap-small);
 }
 
+/* Intro Info */
 .intro__info {
-   max-width: 500px;
+    max-width: 500px;
 }
 
-h1, h3, h2 {
+h1, h2, h3 {
     font-weight: var(--main-font-weight);
     font-family: var(--main-font);
 }
@@ -84,74 +108,88 @@ h3 {
 .intro__icon {
     display: flex;
     margin-top: 60px;
-    gap: 20px;
+    gap: var(--gap-small);
 }
 
 .icons__item {
     font-size: 1rem;
     font-weight: 600;
+    width: 150px;
+    color: black;
+    margin-right: var(--gap-small);
 }
 
-
-.icons__cloud::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: bold;
-    content: "\f0c2";
-    color: var(--accent-color);
-    font-size: 2rem;
-    font-weight: 700;
-    display: block;
-}
-
-.icons__money::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: bold;
-    content: "\f3d1";
-    color: var(--accent-color);
-    font-size: 2rem;
-    font-weight: 700;
-    display: block;
-}
-
+.icons__cloud::before,
+.icons__money::before,
 .icons__timer::before {
     font-family: "Font Awesome 5 Free";
     font-weight: bold;
-    content: "\f2f2";
     color: var(--accent-color);
-    font-size: 2rem;
+    font-size: var(--icon-size);
     font-weight: 700;
     display: block;
+    margin-bottom: var(--icon-margin-bottom);
 }
 
+.icons__cloud::before {
+    content: "\f0c2";
+}
 
+.icons__money::before {
+    content: "\f3d1";
+}
+
+.icons__timer::before {
+    content: "\f2f2";
+}
+
+/* Form */
 .intro__form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.13);
+    background-color: var(--background-color);
+    padding: var(--form-padding);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
     text-wrap: nowrap;
 }
 
 h2 {
     font-size: 2rem;
+    color: black;
+    margin-bottom: var(--gap-large);
 }
 
 label {
     font-size: 0.8rem;
     font-family: var(--main-font);
-    font-weight: var(--main-font-weight);
+    font-weight: 600;
+    color: black;
+}
+
+input {
+    width: 100%;
+    margin: 10px 0 20px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    font-family: var(--main-font);
+    color: #666;
+}
+
+input::placeholder {
+    color: #cacaca;
 }
 
 .btn {
     margin-top: 40px;
-    padding: 20px 30px;
+    padding: var(--btn-padding);
     background-color: var(--accent-color);
     color: white;
     font-weight: 600;
     border: none;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     font-size: 1.1rem;
+    width: var(--btn-width);
+    box-sizing: border-box;
 }
